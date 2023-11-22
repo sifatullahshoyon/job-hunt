@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-primary {
+  @apply py-5 px-7 font-manrope text-white text-xl font-extrabold border-none outline-none rounded-lg transition duration-200 bg-gradient-to-r from-indigo-400 to-blue-500 to-100% cursor-pointer
+}
+
