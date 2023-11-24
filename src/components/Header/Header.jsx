@@ -1,10 +1,9 @@
 import React from 'react';
-import Navbar from './Navbar';
+
 
 const Header = () => {
     return (
         <section>
-            <Navbar />
             {/* Start Header Section */}
             <header className='bg-indigo-50 mb-32'>
                 <div className='container mx-auto px-4'>

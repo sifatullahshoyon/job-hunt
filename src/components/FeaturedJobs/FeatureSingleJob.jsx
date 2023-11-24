@@ -1,7 +1,9 @@
 import React from "react";
-import { MapPinIcon , CurrencyDollarIcon} from '@heroicons/react/24/solid'
+import { MapPinIcon , CurrencyDollarIcon} from '@heroicons/react/24/solid';
+import { Link } from "react-router-dom";
 const FeatureSingleJob = ({ job }) => {
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -37,9 +39,9 @@ const FeatureSingleJob = ({ job }) => {
             <p className="text-xl font-manrope font-semibold">Salary :{salary ? salary : 'Not Found'}</p>
             </div>
           </div>
-          <div className="">
+          <Link to={`/appliedJobs/${id}`}>
             <button className="btn-primary">View Details</button>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
