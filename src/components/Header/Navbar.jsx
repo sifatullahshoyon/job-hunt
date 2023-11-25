@@ -38,7 +38,7 @@ const Navbar = () => {
                   <Link to='/appliedJobs' className="text-lg">Applied Jobs</Link>
                 </li>
                 <li>
-                  <a className="text-lg">Blog</a>
+                  <Link to='/blog' className="text-lg">Blog</Link>
                 </li>
               </ul>
             </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
                 <Link to='/appliedJobs' className="text-lg">Applied Jobs</Link>
               </li>
               <li>
-                <a className="text-lg">Blog</a>
+                <Link to='/blog' className="text-lg">Blog</Link>
               </li>
             </ul>
           </div>
