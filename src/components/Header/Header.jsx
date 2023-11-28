@@ -14,7 +14,7 @@ const Header = () => {
                             <button className='btn-primary mb-2'>Get Started</button>
                         </div>
                         <div>
-                            <img className='object-cover' src="/public/assets/images/user.png" alt="" />
+                            <img className='object-cover' src="/assets/images/user.png" alt="" />
                         </div>
                     </div>
                 </div>
