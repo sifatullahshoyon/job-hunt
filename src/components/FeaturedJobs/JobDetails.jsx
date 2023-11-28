@@ -10,7 +10,7 @@ const JobDetails = () => {
     const navigation = useNavigation();
     useEffect(() => {
         setLoading(true)
-        fetch('/data/jobs.json')
+        fetch('../../../public/data/jobs.json')
         .then(res => res.json())
         .then(data => {
             setJobData(data)
@@ -27,7 +27,7 @@ const JobDetails = () => {
     };
 
     const singleJob = jobData?.find(job => job.id.toString() === id);
-    // console.log(singleJob)
+    console.log(singleJob)
     // const {job_description , job_responsibility , educational_requirements , experiences , salary , job_title , contact_information} = singleJob;
     return (
         <div className='container mx-auto p-5 font-manrope'>
