@@ -5,7 +5,7 @@ import SingleJob from './SingleJob';
 const JobsData = () => {
     const [jobs , setJobs] = useState();
     useEffect(() => {
-        fetch('../../../public/data/categories.json')
+        fetch('/public/data/categories.json')
         .then(res => res.json())
         .then(data => setJobs(data))
     } , []);
