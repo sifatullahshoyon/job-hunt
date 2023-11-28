@@ -1,38 +1,37 @@
-// import React, { useEffect, useState } from 'react';
-// import { useNavigation, useParams } from 'react-router-dom';
-// import Loading from '../Loading/Loading';
-// import { CalendarDaysIcon, CurrencyDollarIcon, EnvelopeIcon, MapPinIcon, PhoneIcon} from '@heroicons/react/24/solid';
+import React, { useEffect, useState } from 'react';
+import { useNavigation, useParams } from 'react-router-dom';
+import Loading from '../Loading/Loading';
+import { CalendarDaysIcon, CurrencyDollarIcon, EnvelopeIcon, MapPinIcon, PhoneIcon} from '@heroicons/react/24/solid';
 
 const JobDetails = () => {
-    // const [jobData , setJobData] = useState();
-    // const [loading , setLoading] = useState(false);
-    // const {id} = useParams();
-    // const navigation = useNavigation();
-    // useEffect(() => {
-    //     setLoading(true)
-    //     fetch('/data/jobs.json')
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         setJobData(data)
-    //         setLoading(false)
-    //     })
-    // } , [])
+    const [jobData , setJobData] = useState();
+    const [loading , setLoading] = useState(false);
+    const {id} = useParams();
+    const navigation = useNavigation();
+    useEffect(() => {
+        setLoading(true)
+        fetch('/data/jobs.json')
+        .then(res => res.json())
+        .then(data => {
+            setJobData(data)
+            setLoading(false)
+        })
+    } , [])
 
-    // if(loading){
-    //     return <Loading />
-    // };
+    if(loading){
+        return <Loading />
+    };
 
-    // if(navigation.state === "loading"){
-    //     <Loading />
-    // };
+    if(navigation.state === "loading"){
+        <Loading />
+    };
 
-    // const singleJob = jobData?.find(job => job.id.toString() === id);
-    // console.log(singleJob)
-    // const {job_description , job_responsibility , educational_requirements , experiences , salary , job_title , contact_information} = singleJob;
+    const singleJob = jobData?.find(job => job.id.toString() === id);
+    console.log(singleJob)
+    const {job_description , job_responsibility , educational_requirements , experiences , salary , job_title , contact_information} = singleJob;
     return (
         <div className='container mx-auto p-5 font-manrope'>
-            <h1>hello</h1>
-            {/* <div className='md:flex gap-6 mt-32'>
+            <div className='md:flex gap-6 mt-32'>
                 <div className='w-full md:w-3/5 h-96 mb-6 p-5'>
                     <p className='mb-6 text-gray-500'><small className='font-extrabold text-black'>Job Description:</small> {job_description ? job_description : "Data Not Found"}</p>
                     <p className='mb-6 text-gray-500'><small className='font-extrabold text-black'>Job Responsibility:</small> {job_responsibility ? job_responsibility : "Data Not Found"}</p>
@@ -70,7 +69,7 @@ const JobDetails = () => {
                         <button className='btn-primary w-full'>Apply Now</button>
                     </div>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };
