@@ -10,7 +10,7 @@ const JobDetails = () => {
     const navigation = useNavigation();
     useEffect(() => {
         setLoading(true)
-        fetch('../../../public/data/jobs.json')
+        fetch('/data/jobs.json')
         .then(res => res.json())
         .then(data => {
             setJobData(data)
