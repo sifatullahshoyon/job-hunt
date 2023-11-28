@@ -12,7 +12,7 @@ const ErrorPage = () => {
                     <FaceFrownIcon className="h-40 w-40 text-yellow-500 mx-auto" />
                 </div>
                 <h1 className='font-manrope my-5 text-7xl font-bold italic'>{status || 404}</h1>
-                <p className='font-manrope font-semibold text-2xl mb-2'>{error.message ? error.message : "Page Not Found"}</p>
+                <p className='font-manrope font-semibold text-2xl mb-2'>{error?.message ? error.message : "Page Not Found"}</p>
                 <Link to='/'><button className='btn-primary my-3'>Back To Home Page</button></Link>
             </div>
         </div>

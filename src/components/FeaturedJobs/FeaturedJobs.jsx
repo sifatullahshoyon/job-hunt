@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import FeatureSingleJob from './FeatureSingleJob';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 const FeaturedJobs = () => {
+    const navigation = useNavigation();
     const featureJobs = useLoaderData();
     const [wrap , setWrap] = useState(false);
     const itemShowAll = wrap ? featureJobs :featureJobs.slice(0,4);
     const handleSeeMoreBtn = () => {
         setWrap(true);
+    };
+    if(navigation.state === "loading"){
+        <Loading />
     };
     return (
         <div className='container mx-auto py-3 px-5 mb-32'>
