@@ -7,11 +7,11 @@ import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
   const data = useLoaderData();
-  console.log(data)
   return (
     <div>
       {/* <jobDataContext.Provider value={data}> */}
         <Header />
+        
         {/* Start Job Category List Section */}
         <JobsData />
         {/* End Job Category List Section */}
