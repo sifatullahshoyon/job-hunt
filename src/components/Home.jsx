@@ -17,7 +17,7 @@ const Home = () => {
         {/* End Job Category List Section */}
 
         {/* Start Featured Jobs Section */}
-        {/* <FeaturedJobs /> */}
+        <FeaturedJobs />
         {/* End Featured Jobs Section */}
 
     </div>

@@ -31,7 +31,7 @@ const JobDetails = () => {
     // const {job_description , job_responsibility , educational_requirements , experiences , salary , job_title , contact_information} = singleJob;
     return (
         <div className='container mx-auto p-5 font-manrope'>
-            {/* <h1>{singleJob.id}</h1> */}
+            <h1>{singleJob.id}</h1>
             {/* <div className='md:flex gap-6 mt-32'>
                 <div className='w-full md:w-3/5 h-96 mb-6 p-5'>
                     <p className='mb-6 text-gray-500'><small className='font-extrabold text-black'>Job Description:</small> {job_description ? job_description : "Data Not Found"}</p>
