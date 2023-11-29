@@ -29,4 +29,19 @@ const addToDb = (id) => {
 };
 
 
-export {addToDb};
+// get stored data form jobsData
+
+const getStoredCart = () => {
+    let shoppingCart = {};
+
+    // get previous data from local Storage.
+    const storedCart = localStorage.getItem("shopping-cart");
+    if(storedCart){
+        shoppingCart = JSON.parse(storedCart)
+    }
+
+    return shoppingCart;
+};
+
+
+export {addToDb , getStoredCart};

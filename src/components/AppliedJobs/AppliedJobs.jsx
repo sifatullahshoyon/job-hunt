@@ -1,15 +1,20 @@
 import React from "react";
-import { useLoaderData } from 'react-router-dom';
-
+import Banner from "../Banner/Banner";
+import { useLoaderData } from "react-router-dom";
+import AllJobs from "./AllJobs";
 
 const AppliedJobs = () => {
-    const appliedJobs = useLoaderData();
-    console.log(appliedJobs)
-    return (
-        <div>
-            <p>Applied Jobs</p>
-        </div>
-    );
+  const { cartArray } = useLoaderData();
+  return (
+    <div>
+      <Banner />
+      <div>
+        {cartArray?.map((cart) => (
+          <AllJobs key={cart.id} cart={cart} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default AppliedJobs;

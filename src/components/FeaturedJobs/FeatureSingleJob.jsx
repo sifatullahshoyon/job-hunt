@@ -1,7 +1,7 @@
 import React from "react";
 import { MapPinIcon , CurrencyDollarIcon} from '@heroicons/react/24/solid';
 import { Link } from "react-router-dom";
-import { addToDb } from "../../utilities/fakeDB";
+
 const FeatureSingleJob = ({ job }) => {
   const {
    id,
@@ -13,10 +13,6 @@ const FeatureSingleJob = ({ job }) => {
     job_type,
     salary,
   } = job;
-
-  const handleViewDetails = (id) => {
-    addToDb(id);
-  };
 
   return (
     <div>
@@ -46,7 +42,7 @@ const FeatureSingleJob = ({ job }) => {
             </div>
           </div>
           <Link to={`/featureJobs/${id}`}>
-            <button onClick={() => handleViewDetails(id)} className="btn-primary">View Details</button>
+            <button className="btn-primary">View Details</button>
           </Link>
         </div>
       </div>

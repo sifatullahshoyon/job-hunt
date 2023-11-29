@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigation, useParams } from 'react-router-dom';
+import { Link, useNavigation, useParams } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import { CalendarDaysIcon, CurrencyDollarIcon, EnvelopeIcon, MapPinIcon, PhoneIcon} from '@heroicons/react/24/solid';
 import Banner from '../Banner/Banner';
+import { addToDb } from '../../utilities/fakeDB';
 
 const JobDetails = () => {
     const [jobData , setJobData] = useState();
@@ -28,6 +29,10 @@ const JobDetails = () => {
     };
 
     const singleJob = jobData?.find(job => job.id.toString() === id);
+    
+    const handleViewDetails = (id) => {
+        addToDb(id);
+      };
 
     return (
         <>
@@ -69,9 +74,9 @@ const JobDetails = () => {
                             <p className='text-gray-500 font-manrope'><span className='text-xl text-black  font-bold'>Address :</span> {singleJob?.contact_information?.address ? singleJob?.contact_information?.address : "Data Not Found"} </p>
                         </div>
                     </div>
-                    <div>
-                        <button className='btn-primary w-full'>Apply Now</button>
-                    </div>
+                    <Link to='/appliedJobs'>
+                        <button onClick={() => handleViewDetails(id)} className='btn-primary w-full'>Apply Now</button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -4,12 +4,13 @@ import App from './App.jsx';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home.jsx';
-import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx';
+import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx'
 import Statistics from './components/Statistics.jsx';
 import ErrorPage from './components/Error/ErrorPage.jsx';
 import Blog from './components/Blog.jsx';
 import JobDetails from './components/FeaturedJobs/JobDetails.jsx';
 import FeaturedJobs from './components/FeaturedJobs/FeaturedJobs.jsx';
+import { productAndCartData } from './loaders/loaders.js';
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
       {
         path: 'blog',
         element: <Blog />
+      },
+      {
+        path: 'appliedJobs',
+        element: <AppliedJobs />,
+        loader: productAndCartData,
       },
     ],
   },
