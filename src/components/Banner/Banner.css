@@ -1,0 +1,12 @@
+.bannerImg-one {
+    position: absolute;
+    left: -230px;
+    bottom: -165px;
+}
+
+.bannerImg-two {
+    position: absolute;
+    right: -340px;
+    top: -209px;
+    transform: rotate(178deg);
+}
