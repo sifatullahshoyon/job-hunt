@@ -18,6 +18,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
+    loader: productAndCartData,
     children: [
       {
         path: '/',

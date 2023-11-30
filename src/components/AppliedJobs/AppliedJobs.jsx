@@ -8,7 +8,7 @@ const AppliedJobs = () => {
   return (
     <div>
       <Banner />
-      <div>
+      <div className="mt-30">
         {cartArray?.map((cart) => (
           <AllJobs key={cart.id} cart={cart} />
         ))}

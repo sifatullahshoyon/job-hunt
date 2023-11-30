@@ -2,6 +2,7 @@ import React from 'react';
 import './Banner.css';
 
 const Banner = () => {
+
     return (
         <div className='bg-indigo-50 h-60'>
             <div className='container mx-auto'>

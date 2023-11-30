@@ -5,7 +5,7 @@ import { CurrencyDollarIcon, MapPinIcon } from "@heroicons/react/24/solid";
 const AllJobs = ({ cart }) => {
   return (
     <div>
-      <div className="container mx-auto p-5">
+      <div className="container mx-auto p-5 mt-10">
         <div className="">
           <div></div>
           <div className="card card-side flex flex-wrap justify-around items-center bg-base-100 shadow-xl p-5">
